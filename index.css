@@ -1,0 +1,264 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+nav {
+  background-color: #e3bc0b;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 100px;
+  z-index: 2;
+}
+.logo {
+  line-height: 70px;
+  padding: 0 100px;
+  height: 70px;
+  padding: 0;
+  margin: 0;
+  left: 40px;
+  cursor: pointer;
+}
+nav ul {
+  float: right;
+  margin-right: 40px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 70px;
+  margin: 0 5px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  margin-left: 20px;
+}
+.check {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 70px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width: 950px) {
+  label .logo {
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 850px) {
+  .check {
+    display: block;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    height: 60vh;
+    background-color: #e3bc0b;
+    top: 80px;
+    transition: all 0.5s;
+    left: -100%;
+    text-align: center;
+  }
+  nav ul li {
+    display: block;
+    color: black;
+  }
+  nav ul li a {
+    font-size: 20px;
+    background: none;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  .check {
+    margin-right: 20px;
+  }
+}
+.main-nav ul li a:hover {
+  color: rgb(0, 136, 240);
+}
+
+/* Dropdown Button */
+.dropdown-menu li{
+display: block;
+background-color: #e3bc0b;
+}
+.dropdown-menu{
+  background-color: #e3bc0b;
+}
+/* Main section */
+section {
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 950px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .box {
+    justify-content: center;
+    align-items: center;
+    margin: 0 40px 0 40px;
+  }
+  .img-border img {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 10px 10px 0 0; */
+    object-fit: cover;
+    transition: all 0.5s;
+  }
+}
+.box {
+  margin-top: 100px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px black;
+  transition: 0.5s;
+  border: 0px solid black;
+  height: 19.5rem;
+  width: 18rem;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+.box .img-border {
+  height: 60%;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.box p {
+  font-size: 14px;
+  padding: 10px;
+}
+.box a {
+  padding: 20px;
+  text-decoration: none;
+  color: rgb(2, 149, 235);
+  font-size: 16px;
+}
+.box img:hover {
+  z-index: 1;
+  transform: scale(1.1);
+}
+
+/* FAQ section */
+
+.faq-section {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-faq {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+.header-faq h2 {
+  display: block;
+  padding: 0 20px 0 25px;
+  flex-direction: column;
+  align-items: center;
+}
+.header-faq h2 {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion {
+  margin-top: 20px;
+  width: 80%;
+}
+.ask-question {
+  border: 1px solid rgb(156, 149, 149);
+  border-radius: 5px;
+  width: 50%;
+  padding: 10px;
+  height: 120px;
+  text-align: center;
+  background-color: #e3bc0b;
+  margin-bottom: 10%;
+  margin-top: 40px;
+}
+.ask-question div{
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.ask-question #p1{
+  display: block;
+  flex-direction: column;
+}
+.ask-question #p2{
+  display: block;
+  flex-direction: column;
+}
+.ask-question button {
+  background-color: #0c4ef3;
+}
+@media (max-width: 1090px)
+{
+  .ask-question {
+    height: 160px;
+    width: auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden ;
+    
+  }
+}
+
+
+/* Style for footer_section */
+.footer_section {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px 0;
+  /* text-align: center; */
+}
+
+.footer_section p {
+  margin: auto;
+  font-size: 14px;
+  text-align: center;
+}
+.default-color {
+  background-color: #f0f0f0;
+}
+
+/* Active style for feature section */
+.active-color {
+  background-color: yellow;
+}
